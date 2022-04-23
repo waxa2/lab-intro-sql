@@ -10,8 +10,8 @@ FROM sakila.film;
 -- 4. Get unique list of film languages under the alias language. Note that we are not asking you to obtain the language per each film,
 -- but this is a good time to think about how you might get that information in the future.
 
-
-
+SELECT name as language 
+FROM sakila.language;
 
 -- 5.1 Find out how many stores does the company have? --> 2 stores.
 SELECT COUNT(DISTINCT(store_id))
