@@ -1,7 +1,13 @@
 -- 1. Use sakila database.
 -- 2. Get all the data from tables actor, film and customer.
 SELECT *
-FROM sakila.actor, sakila.film, sakila.customer;
+FROM sakila.actor;
+
+SELECT *
+FROM sakila.film;
+
+SELECT *
+FROM sakila.customer;
 
 -- 3. Get film titles.
 SELECT DISTINCT(title)
