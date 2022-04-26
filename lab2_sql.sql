@@ -40,12 +40,16 @@ FROM sakila.film
 WHERE length>180;
 
 -- 10. Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
+SELECT email
+FROM sakila.customer;
 
 
-
--- 11. What's the length of the longest film title? -->
-SELECT title,MAX(length(title))
+-- 11. What's the length of the longest film title? 
+SELECT MAX(length(title))
 FROM sakila.film;
+SELECT title
+FROM sakila.film
+WHERE length(title)=27;
 
 
 
