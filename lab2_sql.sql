@@ -40,7 +40,10 @@ FROM sakila.film
 WHERE length>180;
 
 -- 10. Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
-SELECT email
+SELECT CONCAT((LOWER(SUBSTRING(last_name,1))), first_name ,email)
+FROM sakila.customer;
+
+SELECT CONCAT(CONCAT(LEFT(first_name,1),LOWER(SUBSTRING(first_name,2))),' ', last_name,' ','-',' ', LOWER(email)) as name_and_email
 FROM sakila.customer;
 
 
